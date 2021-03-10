@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <style>
+
+            .bl{
+                background-color: brown;
+                color: cornflowerblue;
+            }
+
+            .inl{
+                background-color: cornflowerblue;
+                color: brown;
+            }
+
+            .spe{
+                border-style: dotted ;
+                border-color: crimson;
+    
+            }
+
+            #ble{
+                color: crimson;
+                font-style: italic;
+            }
+            #inle{
+                color: darkblue;
+            }
+        </style>
+    </head>
+    <body>
+        <h1> 03.10 배운 내용 복습</h1>
+        <hr>
+        <h2>엘리먼트 배치</h2>
+        <div class="spe">
+            <h3 id="ble">block elemnet</h3>
+            <p>내용길이와상관없이 한줄을 혼자 차지하며,다음태그는 자동으로 다음줄에 표시됨.</p>
+            <p class="bl">지금보는태그는 block elemnet 태그1.</p>
+            <p>지금보는태그는 block elemnet 태그2.</p>
+            <p>지금보는태그는 block elemnet 태그3.</p>
+        </div>
+        <br><br>
+        <div class="spe">
+            <h3 id="inle">inline elemnet</h3>
+            <p>내용길이만큼 공간을 차지하며,다음태그는 옆으로다다닥 붙어서 표시됨.</p>
+            <span class="inl">지금보는태그는 inline elemnet 태그1.</span>
+            <span>지금보는태그는 inline elemnet 태그2.</span>
+            <span class="inl">지금보는태그는 inline elemnet 태그3.</span>
+        </div>
+        <br><br>
+        <div class="spe">
+            <h3>style display 속성으로 inline/block 변경가능</h3>
+            <p  class="inl" style="display: inline;">지금보는 태그는 P태그로 만든block엘린먼트1,display속성으로 인라인태그로변경함</p>
+            <p  style="display: inline;">지금보는 태그는 P태그로 만든block엘린먼트2,display속성으로 인라인태그로변경함</p>
+            <p  class="inl" style="display: inline;">지금보는 태그는 P태그로 만든block엘린먼트3,display속성으로 인라인태그로변경함</p>
+            <br><br>
+            <span class="bl" style="display: block;">지금보는태그는 inline elemnet 태그1. display속성으로 블록태그로변경함</span>
+            <span class="bl" style="display: block;">지금보는태그는 inline elemnet 태그2. display속성으로 블록태그로변경함</span>
+            <span class="bl" style="display: block;">지금보는태그는 inline elemnet 태그3. display속성으로 블록태그로변경함</span>
+        </div>
+        <br><br>
+        
+    </body>
+</html>

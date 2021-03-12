@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body,
+        html {
+            font-size: 30px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        #percent {
+            font-size: 100%;
+        }
+
+        .em {
+            font-size: 0.75em;
+        }
+
+        /* em 과 %은 부모기준으로 따라감 */
+
+        .rem {
+            font-size: 0.75em;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores earum corporis impedit, quam quaerat rem ea.
+        Dolores quisquam fuga vero nemo voluptatum reiciendis quae est eos libero, accusamus eum dolorum.</p>
+    <p id="percent">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores earum corporis impedit, quam
+        quaerat rem ea. Dolores quisquam fuga vero nemo voluptatum reiciendis quae est eos libero, accusamus eum
+        dolorum.</p>
+    <p class="em">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores earum corporis impedit, quam quaerat
+        rem ea. Dolores quisquam fuga vero nemo voluptatum reiciendis quae est eos libero, accusamus eum dolorum.</p>
+
+    <div class="em">
+        <p class="em">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate a quos eveniet minus placeat
+            saepe dolore, aperiam ab perspiciatis facere. Iste nulla dolores voluptates ad, deleniti totam culpa ea
+            debitis.</p>
+    </div>
+</body>
+    <div class="rem">
+        <p class="rem">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate a quos eveniet minus placeat
+            saepe dolore, aperiam ab perspiciatis facere. Iste nulla dolores voluptates ad, deleniti totam culpa ea
+            debitis.</p>
+    </div>
+
+</html>

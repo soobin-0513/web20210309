@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .static-elem{
+            width: 300px;
+            height: 200px;
+            border:5px solid darkcyan;
+            position: static;
+            /* static은 위치를 이동할수없음! 따라서 아래 위치이동속성적용안됨 */
+            /* 위치이동하는 속성
+                left, right, top, bottom
+            */
+            left: 200px;
+            top: 200px;
+        }
+        .relative-elem{
+            width: 300px;
+            height: 200px;
+            border:5px solid darkcyan;
+            position: relative;
+            /* relativie 원래 있던 위치를 기준으로 좌표를 지정합니다, 그다음태그에 영향을주지않음. */
+            /* 위치이동하는 속성
+                left, right, top, bottom
+            */
+            left: 200px;
+            top: 200px;
+        }
+
+    </style>
+</head>
+<body>
+    
+        <div class="static-elem"></div>
+
+        <hr>
+
+        <div class="relative-elem"></div>
+
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Mollitia et beatae saepe alias blanditiis! Numquam placeat expedita doloribus deserunt mollitia nihil aperiam, obcaecati totam qui maxime sunt necessitatibus vitae dolorum?</p>
+</body>
+</html>

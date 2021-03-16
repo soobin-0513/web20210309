@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="all.min.js"></script>
+    <style>
+
+        .topnav{
+            height: 50px;
+            display: flex;
+            justify-content: space-between;
+            /* 아이템들의 “사이(between)”에 균일한 간격을 만들어줌. */
+        }
+        .mainh1{
+            display: flex;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .mainh1:nth-child(1) > a > h1{
+            /* display: flex; */
+            margin: 0px 0px 0px 10px;
+            /* 살짝옆으르이동 */
+        }
+        .mainh1:nth-child(1)  > a:visited{
+            color:#5555;
+        }
+        .mainh1:nth-child(1)  > a:hover{
+            color:gold;
+        }
+        .mainh1 > p {
+            font-weight: normal;
+            font-size: 15px;
+            padding: 0 10px;
+            letter-spacing: 2px;
+            word-spacing: 3px;
+        }
+        .mainh1:nth-child(2) > a {
+            margin: auto  0px;
+
+            background-color: gold;
+            border-radius: 10px;
+            color: white;
+            padding: 10px;
+            font-size: 16px;
+            text-decoration: none;
+        }
+        .navbar{
+            display: flex;
+            justify-content:space-between;
+            background-color: gray;
+        }
+        .wrapper{
+            display: flex;
+        }
+        .main{
+            cursor:default; 
+            /* 마우스모양 */
+            color: white;
+            font-size: 30px;
+            padding: 15px;
+        }
+        .main:hover{
+            background-color: gold;
+        }
+        .container{
+            display: flex;
+            /* height: 800px; */
+            justify-content: space-between;
+        }
+        .item{
+            display: flex;
+            justify-content: flex-start;
+            align-items: stretch;
+            height: 800px;
+        }
+        .item > .itemul > h2 {
+            text-align: left;
+        }
+        .item:nth-child(1){
+            background-color: wheat;
+            flex-grow: 0;
+            flex-direction: column;
+            /* overflow:scroll; */
+            overflow-y : scroll;
+        }
+        .item:nth-child(2){
+            background-color: goldenrod;
+            flex-grow: 10;
+        }
+        .item:nth-child(3){
+            background-color: wheat;
+            flex-grow: 1;
+        }
+
+        .itemul{
+        text-align: left;
+         margin: 0px;
+         padding: 10px;
+          
+        }
+        .itemul > h2 {
+            padding-right: 20px;
+            margin: 5px 5px 5px 0px;
+            text-align: right;
+        }
+        li{
+            text-align: left;
+            list-style: none;
+            margin: 0px;
+            
+        }
+        li > a {
+            text-decoration: none;
+            color: black;
+        }
+    </style>    
+</head>
+<body>
+
+    <div class="topnav">
+        <div class="mainh1">
+            <a href="https://www.w3schools.com/css/css_background.asp" style="text-decoration: none;">
+                <h1>W3shools<span style="color:gold; ">.com</span></h1>
+            </a>
+        </div>
+        <!-- <div class="mainh1">
+            <p>THE WORLD'S LARGEST WEB DEVELOPER SITE</p>
+        </div> -->
+        <div class="mainh1">
+            <p>THE WORLD'S LARGEST WEB DEVELOPER SITE</p>
+            <a href="https://profile.w3schools.com/log-in?redirect_url=https%3A%2F%2Fmy-learning.w3schools.com%2F" target="_blank" title="로그인으로이동">
+                <botton>LOG IN</botton>
+            </a>
+        </div>
+    </div>
+
+    <!-- .navbar>.wrapper>.main*6>lorem1^^.wrapper>.main*2>lorem1 -->
+    <div class="navbar">
+        <div class="wrapper">
+            <div class="main"><i class="fas fa-bars"></i></div>
+            <div class="main"><i class="fas fa-home"></i></div>
+            <div class="main">HTML</div>
+            <div class="main">CSS   </div>
+            <div class="main">JAVASCRIPT</div>
+            <div class="main">MORE<i class="fas fa-caret-down"></i></div>
+        </div>
+        <div class="wrapper">
+            <div class="main"><i class="fas fa-adjust"></i></div>
+            <div class="main"><i class="fas fa-globe-europe"></i></div>
+            <div class="main"><i class="fas fa-search"></i></div>
+        </div>
+    </div>
+        <!-- .container>.item*3 -->
+        <div class="container">
+            <div class="item">
+                <ul class="itemul">
+                    <h2>CSS <span>Tutorial</span></h2>
+                    <li><a href="#">CSS HOME</a></li>
+                    <li><a href="#">CSS Introduction</a></li>
+                    <li><a href="#">CSS Synatax</a></li>
+                    <li><a href="#">CSS HOW TO</a></li>
+                    <li><a href="#">CSS Colors</a></li>
+                    <li><a href="#">CSS Synatax</a></li>
+                    <li><a href="#">CSS HOW TO</a></li>
+                    <li><a href="#">CSS Colors</a></li>
+                    <li><a href="#">CSS Synatax</a></li>
+                    <li><a href="#">CSS HOW TO</a></li>
+                    <li><a href="#">CSS Colors</a></li>
+                    <li><a href="#">CSS Synatax</a></li>
+                    <li><a href="#">CSS HOW TO</a></li>
+                    <li><a href="#">CSS Colors</a></li>
+                    <li><a href="#">CSS Synatax</a></li>
+                    <li><a href="#">CSS HOW TO</a></li>
+                    <li><a href="#">CSS Colors</a></li>
+                </ul>
+                <ul class="itemul">
+                    <h2>CSS <span>Advanced</span></h2>
+                    <li><a href="#">CSS HOME</a></li>
+                    <li><a href="#">CSS Introduction</a></li>
+                    <li><a href="#">CSS Synatax</a></li>
+                    <li><a href="#">CSS HOW TO</a></li>
+                    <li><a href="#">CSS Colors</a></li>
+                    <li><a href="#">CSS Synatax</a></li>
+                    <li><a href="#">CSS HOW TO</a></li>
+                    <li><a href="#">CSS Colors</a></li>
+                </ul>
+                <ul class="itemul">
+                    <h2>CSS <span>Resoinsive</span></h2>
+                    <li><a href="#">CSS HOME</a></li>
+                    <li><a href="#">CSS Introduction</a></li>
+                    <li><a href="#">CSS Synatax</a></li>
+                    <li><a href="#">CSS HOW TO</a></li>
+                    <li><a href="#">CSS Colors</a></li>
+                    <li><a href="#">CSS Synatax</a></li>
+                    <li><a href="#">CSS HOW TO</a></li>
+                    <li><a href="#">CSS Colors</a></li>
+                    <li><a href="#">CSS Synatax</a></li>
+                    <li><a href="#">CSS HOW TO</a></li>
+                    <li><a href="#">CSS Colors</a></li>
+                    <li><a href="#">CSS Synatax</a></li>
+                    <li><a href="#">CSS HOW TO</a></li>
+                    <li><a href="#">CSS Colors</a></li>
+                    <li><a href="#">CSS Synatax</a></li>
+                    <li><a href="#">CSS HOW TO</a></li>
+                    <li><a href="#">CSS Colors</a></li>
+                    <li><a href="#">CSS Synatax</a></li>
+                    <li><a href="#">CSS HOW TO</a></li>
+                    <li><a href="#">CSS Colors</a></li>
+                    <li><a href="#">CSS Synatax</a></li>
+                    <li><a href="#">CSS HOW TO</a></li>
+                    <li><a href="#">CSS Colors</a></li>
+                </ul>
+            </div>
+            <div class="item">
+                내용
+            </div>
+            <div class="item">
+                광고
+            </div>
+        </div>
+
+</body>
+</html>

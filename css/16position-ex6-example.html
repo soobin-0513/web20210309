@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .main{
+            padding: 0px;
+            margin: 0px;
+        }
+        .main > li {
+            box-sizing: border-box;
+            width: 200px;
+            height: 100px;
+            border: 5px solid goldenrod;
+            position: relative;
+            text-align: center;
+            padding: 40px 0px;
+        }
+        .sub{
+            padding: 0px;
+            margin: 0px;
+            position: absolute;
+            top: -5px;
+            left: 200px; 
+            list-style-type: none;
+            display: none;
+        }
+        .sub > li {
+            box-sizing: border-box;
+            width: 200px;
+            height: 100px;
+            border: 5px solid darkcyan;
+            text-align: center;
+            padding: 40px 0px;
+        }
+        .main > li:hover >.sub {
+            display: block;
+        }
+        .ul2{
+            top:-105px;
+        }
+        .ul3{
+            top:-205px;
+        }
+        .ul4{
+            top:-305px;
+        }
+        .ul5{
+            top:-405px;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- ul.main>li*5>lorem1 -->
+    <ul class="main">
+        <li>Lorem.
+            <!-- ul.sub>li*5>lorem1 -->
+            <ul class="sub">
+                <li>Lorem.</li>
+                <li>Impedit.</li>
+                <li>Animi.</li>
+                <li>Deserunt.</li>
+                <li>Exercitationem!</li>
+            </ul>
+        </li> 
+        <li>Nam!
+            <ul class="sub ul2">
+                <li>Lorem.</li>
+                <li>Blanditiis.</li>
+                <li>Dolor?</li>
+                <li>Doloremque.</li>
+                <li>Similique.</li>
+            </ul>
+        </li>
+        <li>Aspernatur!
+            <ul class="sub ul3">
+                <li>Lorem33.</li>
+                <li>Blanditiis.</li>
+                <li>Dolor?</li>
+                <li>Doloremque33.</li>
+                <li>Similique33.</li>
+            </ul>
+        </li>
+        <li>Consequatur.
+            <ul class="sub ul4">
+                <li>Lorem44.</li>
+                <li>Blanditiis44.</li>
+                <li>Dolor?</li>
+                <li>Doloremque44.</li>
+                <li>Similique.</li>
+            </ul>
+        </li>
+        <li>안녕.
+            <ul class="sub ul5">
+                <li>나야.</li>
+                <li>잘지내니.</li>
+                <li>거긴어때</li>
+                <li>여기추워.</li>
+                <li>Similique.</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

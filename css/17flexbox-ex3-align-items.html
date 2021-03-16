@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <style>
-        .container{
-            display: flex;
-            height: 300px;
-            justify-content: space-between;
-            /* 여러 속성 사용가능 사이트참고 */
-        }
-        .item{
-            font-size: 25px;
-            color: coral;
-        }
-
-        .item:nth-child(odd){
+<style>
+    .container{
+        display: flex;
+        height: 300px;
+        justify-content: space-around;
+        align-items:center;
+    }
+    .item{
+        font-size: 30px;
+        color:blue;
+    }
+    .item:nth-child(odd){
             background-color: aquamarine;
         }
         .item:nth-child(even){
             background-color: chartreuse;
         }
-    </style>
+</style>
 </head>
 <body>
     <!-- .container>.item{$}*5 -->

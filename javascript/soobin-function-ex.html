@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="../css/all.min.js"></script>
+    <style>
+        #box{
+            width: 200px;
+            height: 300px;
+            background-color: skyblue;
+            border: 5px solid white;
+        }
+        h1{
+            text-align: center;
+            color: blue;
+            font-size: 20px;
+        }
+        /* i{
+            display: flex;
+        } */
+    </style>
+</head>
+<body>
+    <!-- 수빈 미니계산기만들기 -->
+    
+    <div id="box">
+        <h1>초간단 계산기</h1>
+
+        <input type="text" id="input1">
+      
+        <!-- button*4#button$>i.fas.fa-plus -->
+        <button onclick="add()" id="button1">
+            <i class="fas fa-plus"></i>
+        </button>
+        <button onclick ="minus()" id="button2">
+            <i class="fas fa-minus"></i>
+        </button>
+        <button onclick="times()" id="button3">
+            <i class="fas fa-times"></i>
+        </button>
+        <button onclick="divide()" id="button4">
+            <i class="fas fa-divide"></i>
+        </button>
+    
+        <input type="text" id="input2">
+
+        <button id="button5">
+            <i class="fas fa-equals"></i>
+        </button>
+
+        <input type="text" readonly="readonly" id="input3">
+
+    </div>
+    
+    <script>
+
+           
+            
+
+         function add(params){
+            var a = document.getElementById("input1").value;
+            var b = document.getElementById("input2").value;
+            var c = Number(a) + Number(b);
+            document.getElementById("input3").value= c
+        
+         }
+
+         function minus (params){
+            
+            var a = document.getElementById("input1").value;
+            var b = document.getElementById("input2").value;
+            document.getElementById("input3").innerHTML = a - b;
+
+        }
+
+        function times (params){
+            
+            var a = document.getElementById("input1").value;
+            var b = document.getElementById("input2").value;
+            document.getElementById("input3").innerHTML = a * b;
+
+        }
+
+        function divide (params){
+            
+            var a = document.getElementById("input1").value;
+            var b = document.getElementById("input2").value;
+            document.getElementById("input3").innerHTML = a / b;
+
+        }
+
+    </script>
+
+
+</body>
+</html>

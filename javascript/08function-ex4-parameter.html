@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="stylesheet" href="../css/all.min.css">
+
+    <style>
+        #icon1{
+            font-size: 55px;
+            color: darkcyan;
+        }
+    </style>
+</head>
+<body>
+
+    <input onkeyup="changeCall()" type="text" id="input1"> 
+     <!-- div>i#icon1.fas.fa-heart -->
+     <div>
+        <i id="icon1" class="fas fa-heart"></i>
+    </div>
+
+    <script>
+
+        function changeCall(){
+            var v = document.getElementById("input1").value;
+            change(v);
+        }
+
+        function change (iconName){
+            document.getElementById("icon1").className = iconName;
+            //icon1 아이디를 가져와서 클라스이름을 iconName준다.
+
+        }
+        // change();
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+</style>
+</head>
+<body>
+    <script>
+        
+        myFun();  //호출함수는 위에 써도됨
+        //hoisting 가능;
+        function myFun(params){
+            console.log("SOOBIN");
+        }
+
+
+        fun2();
+        //변수에 함수를 할당, 이름없는함수 hoisting안됨
+        var fun2 = function (params) {
+            console.log("no mane");
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../css/all.min.css">
+<style>
+</style>
+</head>
+<body>
+<script>
+    var str="lorem ipsum dolor sit amet.";
+    var idx= str.indexOf("ipsum");
+    console.log(idx);
+    // var str="동해물과 백두산이 마르고 닳도록";
+    // var idx= str.indexOf("백두산");
+
+
+    var res = str.slice(12,18);
+    console.log(res);
+    console.log(str.slice(12));
+    //  문자열의 일부를 추출하고 추출 된 부분을 새 문자열로 반환합니다.
+    // 이 메서드는 시작 위치와 끝 위치 (포함되지 않은 끝)의 두 가지 매개 변수를 사용합니다.
+    // 이 예제는 위치 7에서 위치 12 (13-1)까지 문자열의 일부를 자릅니다.
+
+
+    var res2 = str.substring(12,17);
+    console.log(res2);
+    console.log(str.substr(12));
+    // 두 번째 매개 변수를 생략하면 substr()에서 나머지 문자열을 잘라냅니다.
+
+    var res3 = str.substr(12,5);
+    console.log(res3);
+    console.log(str.substr(12));
+    // /두 번째 매개 변수를 생략하면 substr()에서 나머지 문자열을 잘라냅니다.
+</script>
+</body>
+</html>

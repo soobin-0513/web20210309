@@ -25,7 +25,7 @@
     </style>
 </head>
 <body>
-    <!-- 수빈 미니계산기만들기 -->
+    <!--  미니계산기만들기 -->
     
     <div id="box">
         <h1>초간단 계산기</h1>
@@ -73,7 +73,7 @@
             
             var a = document.getElementById("input1").value;
             var b = document.getElementById("input2").value;
-            document.getElementById("input3").innerHTML = a - b;
+            document.getElementById("input3").value = a - b;
 
         }
 
@@ -81,7 +81,7 @@
             
             var a = document.getElementById("input1").value;
             var b = document.getElementById("input2").value;
-            document.getElementById("input3").innerHTML = a * b;
+            document.getElementById("input3").value = a * b;
 
         }
 
@@ -89,7 +89,7 @@
             
             var a = document.getElementById("input1").value;
             var b = document.getElementById("input2").value;
-            document.getElementById("input3").innerHTML = a / b;
+            document.getElementById("input3").value = a / b;
 
         }
 

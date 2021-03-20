@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>계산기 만들기</title>
+</head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<body>
+    <form name ="cal">
+        <table>
+            <caption>계산기</caption>
+            <tr>
+                <th colspan="4"><input type="text" name="result" value="0"></th>
+            </tr>
+            <tr>
+           <td><input type="button" value="7"></td>
+           <td><input type="button" value="8"></td>
+           <td><input type="button" value="9"></td>
+           <td><input type="button" value="+"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4"></td>
+                <td><input type="button" value="5"></td>
+                <td><input type="button" value="6"></td>
+                <td><input type="button" value="-"></td>
+            </tr>    
+            <tr>
+                <td><input type="button" value="1"></td>
+                <td><input type="button" value="2"></td>
+                <td><input type="button" value="3"></td>
+                <td><input type="button" value="*"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="button" value="0"></td>
+                <td><input type="button" value="%"></td>
+                <td><input type="button" value="/"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><input type="button" class="cls_btn" value="Clear"></td>
+                <td colspan="2"><input type="button" class="result_btn" value="="></td>
+            </tr>       
+        </table>
+    </form>
+    <script>
+
+        //form 객체는 forms 라는 객체명과 name의 속성으로 참조할 수 있다.   
+        var inp=document.forms['cal'];
+        //태그명이 input 인 객체를 지정
+        var input=inp.getElementsByTagName('input');
+        var cls_btn = document.getElementsByClassName('cls_btn')[0];
+        var result_btn=document.getElementsByClassName('result_btn')[0]; 
+
+        //계산기 초기화 
+        function clr(){
+            inp['result'].value=0;
+        }
+
+        function calc(value){
+            //숫자를 입력하면 0을 지운다. 
+            if(inp['result'].value == 0){
+                inp['result'].value='';
+            }
+        inp['result'].value+=value;
+        }
+        function calc_result(){
+            var result =document.forms['cal']['result'];
+            //eval 함수는 문자열을 코드로 인식하게 하는 함수이다. 
+            var calc=eval(result.value);
+            //결과창에 표시 
+            inp['result'].value=calc;    
+        }
+
+        /*이벤트 핸들러*/ 
+        for(var i =0; i<input.length; i++){
+            //= 버튼과 clear 빼고 숫자만 처리하도록 한다. 
+            if(input[i].value!='=' && input[i].value!='clear'){
+                input[i].onclick=function(){
+                    calc(this.value);
+                }
+            }
+        }
+        cls_btn.onclick=function(){
+            clr();
+        }
+        result_btn.onclick=function(){
+            try{
+                calc_result();
+            }
+            catch(err){
+                var result =inp['result'];
+                result.value='입력오류'; 
+            }
+        }
+
+    </script>
+</body>
+</html>

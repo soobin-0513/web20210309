@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../css/all.min.css">
+<style>
+     #container{
+         text-align: center;
+     }
+     .text1{
+         font-weight: bold;
+         padding: 10px;
+         font-size: 20px;
+     }
+    i{
+            font-size: 100px;
+        }
+</style>
+</head>
+<body>
+    <div id="container">
+        <botton onclick="games(1)" class="user">
+            <i class="fa fa-hand-rock"></i>
+        </botton>
+
+        <botton onclick="games(2)" class="user">
+            <i class="fa fa-hand-scissors"></i>
+        </botton>
+
+        <botton onclick="games(3)" class="user">
+            <i class="fa fa-hand-paper"></i>
+        </botton>
+        <div class="text1">VS</div>
+        <div class="computer"></div>
+        <div class="result"></div>
+    </div>
+    <script>
+            function games(user){
+                
+               var computer = Math.floor(Math.random()*3 +1 );
+                var c = document.querySelector(".computer");
+                var u = document.querySelector(".user");
+                //아이콘 세팅 함수 불러오기
+                //icons(user,u);
+                icons(computer,c);    
+               var resultText = "";
+                
+                if (user == computer) {
+                resultText = "비겼습니다!";
+                } else if (user == 1 && computer == 2) { //사용자바위,컴퓨터가위
+                    resultText = "이겼습니다!";
+                } else if (user == 2 && computer == 3) { //사용자가위,컴퓨터보
+                    resultText = "이겼습니다!";
+                } else if (user == 3 && computer == 1) {//사용자보,컴퓨터바위
+                    resultText = "이겼습니다!";
+                } else {
+                    resultText = "졌습니다ㅠㅠ";
+            }
+                document.querySelector(".result").innerHTML= resultText;
+            }
+
+            function icons(botton,icon){
+                switch(botton){
+                    case  1:   //botton값이1일때 아이콘은 바위
+                    icon.innerHTML ="<i class='fas fa-hand-rock'></i>";
+                    break;
+
+                    case 2 : //botton값이 2일때 아이콘은 가위
+                    icon.innerHTML ="<i class='fas fa-hand-scissors'></i>";
+                    break;
+
+                    case 3: //botton 값이 3일때 아이콘은 보
+                    icon.innerHTML = "<i class='fas fa-hand-paper'></i>";
+                    break;
+                }
+            }
+
+
+    </script>
+
+</body>
+</html>

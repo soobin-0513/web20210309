@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../css/all.min.css">
+<style>
+</style>
+</head>
+<body>
+    <input type="text">
+    <button onclick="add()">
+        <i class="fas fa-plus"></i>
+    </button>
+
+    <ui id="result"></ui>
+
+    <script>
+
+        function add(){
+            var text = document.querySelector("input").value;
+            text = text.trim();
+            var ul = document.getElementById("result");
+            
+            if(text != "" ){ //텍스트가 빈칸이아닐때만 실행
+                ul.innerHTML += "<li>"+ text + "</li>";
+                // 기존에있는거도 추가해야함  +=
+            }
+
+            
+        }
+
+    </script>
+</body>
+</html>

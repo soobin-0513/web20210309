@@ -11,17 +11,18 @@
 <body>
     <div id="result"></div>
     <script>
-        var txt="";
-        for(var i=0;i<5;i++){
+        var txt=""; //처음실행되는 코드 -> 비어있음
+        for(var i=0;i<5;i++){ 
             for(var j =0;j<=i;j++){
-                txt +="*";
-                 console.log(i);
+                console.log(txt);
+                txt +="*"; //txt= txt + "*"
             }
-            txt+="<br>";
-             console.log(j);
+            console.log(txt);
+            txt+="<br>";//txt= txt + "<br>"
         }
         document.getElementById("result").innerHTML=txt;
-        // console.log(j);
+
+        // 완성된코드
     </script>
 </body>
 </html>

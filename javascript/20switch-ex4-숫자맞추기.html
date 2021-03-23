@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../css/all.min.css">
+<style>
+</style>
+</head>
+<body>
+    <input type="text" id="input1" placeholder="1부터 100사이의 수를 입력해주세요">
+    <br>
+
+    <button onclick="check()">확인</button>
+
+    <h1 id="message"></h1>
+
+    <script>
+
+
+        function check(){
+            var computerNumber=Math.floor(Math.random()*100)+1; //컴퓨터 넘버
+            console.log(computerNumber);
+
+            var userNumber = document.getElementById("input1").value;
+            userNumber= Number(userNumber);  //숫자형으로 전환
+
+            var txt="";
+
+            //computerNumber와 userNumber비교
+            // userNumber 와 computerNumber 같으면 "정답입니다"
+            // userNumber 와 computerNumber보다 작으면 "더 큰 수 를 입력해주세요"
+            // userNumber 와 computerNumber보다 크면 "더 작은 수 를 입력해주세요"
+
+            if(userNumber == computerNumber ){
+                    txt="정답입니다!";
+            }else if (userNumber < computerNumber){
+                    txt="더 큰 수를 입력해주세요!" ;
+             }else {
+                 txt="더 작은 수를 입력해주세요!";
+            }
+
+
+            document.getElementById("message").innerHTML=txt;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,6 +1,4 @@
-
 <!DOCTYPE html>
-<html lang="ko">
 <head>
     <title>계산기 만들기</title>
 </head>
@@ -8,7 +6,7 @@
 <body>
     <form name ="cal">
         <table>
-            <caption>계산기</caption>
+            <caption>미니 계산기</caption>
             <tr>
                 <th colspan="4"><input type="text" name="result" value="0"></th>
             </tr>
@@ -56,7 +54,7 @@
         }
 
         function calc(value){
-            //숫자를 입력하면 0을 지운다. 
+        //숫자를 입력하면 0을 지운다. 
             if(inp['result'].value == 0){
                 inp['result'].value='';
             }

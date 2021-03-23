@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../css/all.min.css">
+    <style>
+        *{
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <div id="result"></div>
+    <script>
+        var txt="";
+        for(var i=0;i<5;i++){
+            for(var j =0;j<=i;j++){
+                txt +="*";
+                 console.log(i);
+            }
+            txt+="<br>";
+             console.log(j);
+        }
+        document.getElementById("result").innerHTML=txt;
+        // console.log(j);
+    </script>
+</body>
+</html>

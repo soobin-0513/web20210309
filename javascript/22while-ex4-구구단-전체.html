@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../css/all.min.css">
+<style>
+
+</style>
+</head>
+<body>
+    <h1>구구단</h1>
+    <div id="gugudan"></div>
+    <script>
+        
+        var txt="";
+        var i=2;
+        while(i<=9){
+            console.log(i);
+            var j =1;  
+            while(j<=9){
+                console.log(j);
+                txt+= i + "X" + j +"=" + (i*j) + "<br>";
+                j++;
+            }
+            i++;
+            document.getElementById("gugudan").innerHTML=txt;
+        }
+    </script>
+</body>
+</html>

@@ -11,9 +11,14 @@
     <button onclick="lotto()">번호 출력</button>
     <script>
         function lotto(){
-            var numbers=[43,27,34,17,13,12,1,4,39,33]; //배열 만들기 -> 6개 번호를 이배열에서 뽑을꺼야 
-            var getRD=numbers[Math.floor(Math.random()*numbers.length)] ;
+            var numbers=[43,27,34,17,13,12,1,4,39,33]; //배열 만들기 -> 여기서번호6개봅 배열길이6으로만들어야함
+            var getRD=numbers[Math.floor(Math.random()*numbers.length)] ;// 배열순서를 랜덤으로만듬
             console.log(getRD);
+
+
+            for(i=0;i<6;i++){
+                console.log(getRD);
+            }
 
             // while(numbers.length>6){
             //      var getRD=numbers[Math.floor(Math.random() * numbers.length)];

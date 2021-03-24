@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../css/all.min.css">
+<style>
+</style>
+</head>
+<body>
+    <script>
+        var arr1 =[3,4,1,99,2,10];
+
+        arr1.sort();
+        for(var i=0; i<arr1.length;i++){
+            console.log(arr1[i])
+        }
+        //string으로 인식하기때문에 오른차순으로 내려도 출력값은 1,10,2,3,4,99
+
+        // callback 함수 사용해서 숫자 오른차순으로 변경
+        arr1.sort(function(a,b){
+            return a-b;
+        });
+        for(var i=0; i<arr1.length;i++){
+            console.log(arr1[i])
+        }
+
+    </script>
+</body>
+</html>

@@ -11,9 +11,9 @@
     <button onclick="lotto()">번호 출력</button>
     <script>
         function lotto(){
-            var numbers=[]; //빈배열 만들기 -> 뽑은6개 번호를 이배열에 채워넣을꺼야
+            var numbers=[]; //빈배열 만들기, 배열길이은 0 -> 뽑은6개 번호를 이배열에 채워넣을꺼야
 
-            while(numbers.length<6){ //무조건6개 숫자 출력
+            while(numbers.length<6){ //무조건6개 숫자 출력,길이가6보다작을때까지출력
                 var newNmber =getRandomNumber();
 
                 //출력한 숫자중복방지! 

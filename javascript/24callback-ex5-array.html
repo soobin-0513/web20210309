@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../css/all.min.css">
+<style>
+</style>
+</head>
+<body>
+    <script>
+        var a= 3;
+        var b ="hello";
+
+        var c=[5,8,0];  //[] 이안에있는게 바로배열 !
+        console.log(c.length); //배열이3개라 출력값은 3
+
+        var d= [];  // 빈배열
+        console.log(d.length); //출력값 0
+        d.push(33);                 //push 배열안에 값넣기
+        console.log(d.length);//출력값 1
+
+        console.log((c)[0]); //c에 첫번째 배열 출력 출력값은 5
+
+        console.log("----------")
+        
+        
+        for (var i =0; i<c.length;i++){ //i<c.lenght i는 c가있는배열(길이)보다작다 i<3과 같음
+            console.log(c[i]);
+        }
+        
+        console.log("----------")
+        c.forEach(function(item,index){
+            console.log(index + "의 값:" + item);
+        })
+    </script>
+</body>
+</html>

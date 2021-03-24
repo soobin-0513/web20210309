@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../css/all.min.css">
+<style>
+</style>
+</head>
+<body>
+    <input type="text" id="input1">
+    <input type="text" id="input2">
+    
+    <!-- botton*2[onclick]>i.fas.fa-plus -->
+    <botton onclick="process('+')"><i class="fas fa-plus"></i></botton>  
+    <!-- 더하기버튼을 클릭하면process 함수가 실행됨 -->
+
+
+    <botton onclick="process('-')"><i class="fas fa-minus"></i></botton>
+
+    <div id="result"></div>
+
+<script>
+
+    function add(a,b){
+        return a+b;
+    }
+
+    function minus(x,y){
+        return  x-y;
+    }
+
+    function calc(p1,p2,oper){
+        return oper(p1,p2); //p1,p2 인자값을 oper 인자로넣어서 다기사용
+    }
+
+    function process(op){
+        var x = Number(document.getElementById("input1").value);
+        var y = Number(document.getElementById("input2").value);
+        
+        res = 0;
+
+        switch(op){
+            case '+':
+                res = calc(x,y,add);
+                break;
+            case '-':
+                res =calc(x,y,minus);
+                break;
+        }
+
+        document.getElementById('result').innerHTML =res;
+    }
+</script>
+</body>
+</html>

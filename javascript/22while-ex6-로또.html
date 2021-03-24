@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../css/all.min.css">
+<style>
+</style>
+</head>
+<body>
+    <h3 id="result"></h3>
+
+    <button onclick="lotto()">번호 출력</button>
+    <script>
+        function lotto(){
+            var numbers=[]; //빈배열 만들기 -> 뽑은6개 번호를 이배열에 채워넣을꺼야
+
+            while(numbers.length<6){ //무조건6개 숫자 출력
+                var newNmber =getRandomNumber();
+
+                //출력한 숫자중복방지! 
+                if(!numbers.includes(newNmber)){ //조건 : 배열에 없을때, 실행:랜덤으로 새로운 값을 만들어서넣어줌
+                    //includes 는 배열속 해당 원소가있으면 true / 없으면 false.
+                    numbers.push(newNmber);//push은배열 객체 마지막에 값을넣어줌
+                }
+            }
+            document.getElementById("result").innerHTML="";
+
+            for(i=0; i<numbers.length;i++){
+
+                document.getElementById("result").innerHTML += numbers[i] + ",";
+            }
+        }
+
+        function getRandomNumber(){ //랜덤으로 로또번호추출 함수
+            return Math.floor(Math.random() * 45 ) +1;
+        }
+    </script>
+</body>
+</html>

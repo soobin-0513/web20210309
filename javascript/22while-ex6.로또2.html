@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../css/all.min.css">
+<style>
+</style>
+</head>
+<body>
+    <h3 id="result"></h3>
+
+    <button onclick="lotto()">번호 출력</button>
+    <script>
+        function lotto(){
+            var numbers=[43,27,34,17,13,12,1,4,39,33]; //배열 만들기 -> 6개 번호를 이배열에서 뽑을꺼야 
+            var getRD=numbers[Math.floor(Math.random()*numbers.length)] ;
+            console.log(getRD);
+
+            // while(numbers.length>6){
+            //      var getRD=numbers[Math.floor(Math.random() * numbers.length)];
+            // }
+
+
+            
+            //     //출력한 숫자중복방지! 
+            //     if(!numbers.includes(getRD)){ //조건 : 배열에 없을때, 실행: 
+            //         //includes 는 배열속 해당 원소가있으면 true / 없으면 false.
+            //         numbers.push(getRD);//push은배열 객체 마지막에 값을넣어줌
+            //     }
+
+            // document.getElementById("result").innerHTML="";
+
+            // for(i=0; i<6;i++){
+            //     document.getElementById("result").innerHTML += getRD[i] + ",";
+            // }
+        }
+
+    </script>
+</body>
+</html>

@@ -12,13 +12,18 @@
     <script>
         function lotto(){
             var numbers=[43,27,34,17,13,12,1,4,39,33]; //배열 만들기 -> 여기서번호6개봅 배열길이6으로만들어야함
-            var getRD=numbers[Math.floor(Math.random()*numbers.length)] ;// 배열순서를 랜덤으로만듬
-            console.log(getRD);
 
 
-            for(i=0;i<6;i++){
-                console.log(getRD);
+            console.log("=============");
+            for (var i = 0; i < 6; i++) {
+                var randomIndex = Math.floor(Math.random() * numbers.length);
+                console.log(numbers.splice(randomIndex, 1)[0]);
             }
+            // var getRD=numbers[Math.floor(Math.random()*numbers.length)] ;// 배열순서를 랜덤으로만듬
+            // console.log(getRD);
+            // for(var i=0;i<6;i++){
+            //     console.log(numbers[i]);
+            // }
 
             // while(numbers.length>6){
             //      var getRD=numbers[Math.floor(Math.random() * numbers.length)];

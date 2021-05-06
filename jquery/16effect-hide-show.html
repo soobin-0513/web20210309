@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../css/all.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+</script>
+<style>
+</style>
+<script>
+    $(document).ready(function () {
+        $("#btn1").on("click",function name(params) {
+            $("h1").hide(1000);
+        });
+        //bt2 클릭하며 h1이 1000ms동안 show하도록
+        $("#btn2").on("click",function name(params) {
+            $("h1").show(1000);
+        });
+    });
+
+    //toggle 1번클릭 숨기고 1번더클릭하면 보여주고
+    // $(document).ready(function () {
+    //     $("#btn1").on("click",function name(params) {
+    //         $("h1").toggle(1000);
+    //     });
+
+    // });
+
+
+</script>
+</head>
+<body>
+    <!-- button*2#btn$+h1>lorem3 -->
+    <button id="btn1">숨기기</button>
+    <button id="btn2">보이기</button>
+    <h1>Lorem, ipsum dolor.</h1>
+</body>
+</html>

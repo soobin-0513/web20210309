@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../css/all.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+</script>
+<style>
+</style>
+<script>
+    $(document).ready(function () {
+       $("#div1").click(function () {
+           var t = $("#div1").text();
+           console.log(t);
+       }); 
+       
+
+       $("#div2").click(function () {
+            var h = $("#div2").html(); //태그까지 다보여줌
+            console.log(h);
+       });
+    });
+</script>
+</head>
+<body>
+    <div id="div1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta porro, rerum officia enim dignissimos exercitationem aut architecto odio temporibus, culpa ut laudantium iste eveniet, atque quae reprehenderit sed. In, quaerat?</p>
+    </div>
+    <div id="div2">
+        <p>Velit quibusdam modi porro culpa dicta odit sint deserunt totam nihil rerum iure iste, rem aspernatur dolorum vero facere nostrum magnam nobis. Dolorem corrupti eius nemo porro quaerat obcaecati odit.</p>
+    </div>
+</body>
+</html>

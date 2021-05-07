@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="../css/all.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+</script>
+<style>
+</style>
+<script>
+    $(document).ready(function() {
+        //siblings()선택자만빼고 나머지 
+        $("#head5").siblings().css("color","blue");
+
+        $("#head5").next().css("background-color","red");
+
+        $("#head5").prev().css("background-color","pink");
+
+        $("#head5").nextAll().css("border","2px solid green");
+
+        $("#head5").prevAll().css("border","2px dotted yellow");
+        
+        
+    });
+</script>
+</head>
+<body>
+    <h1 id="head1">Lorem, ipsum dolor.</h1>
+    <h1 id="head2">Blanditiis, iure inventore?</h1>
+    <h1 id="head3">Sequi, quasi consequuntur?</h1>
+    <h1 id="head4">Consequuntur, blanditiis veritatis?</h1>
+    <h1 id="head5">Sunt, ab et?</h1>
+    <h1 id="head6">Hic, dignissimos sit.</h1>
+    <h1 id="head7">Voluptates, in eveniet!</h1>
+    <h1 id="head8">Repudiandae, consequatur dolor?</h1>
+    <h1 id="head9">Est, sequi? Aperiam!</h1>
+    <h1 id="head10">Itaque, nisi reprehenderit.</h1>
+</body>
+</html>
